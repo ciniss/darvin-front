@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UntypedFormGroup, UntypedFormControl } from '@angular/forms';
+import { UntypedFormGroup, UntypedFormControl, FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector:'app-login',
@@ -8,9 +8,9 @@ import { UntypedFormGroup, UntypedFormControl } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
-  profileForm = new UntypedFormGroup({
-    firstName: new UntypedFormControl(''),
-    lastName: new UntypedFormControl(''),
+  profileForm = new FormGroup<any>({
+    username: new FormControl(''),
+    password: new FormControl(''),
   });
 
   constructor() { }
